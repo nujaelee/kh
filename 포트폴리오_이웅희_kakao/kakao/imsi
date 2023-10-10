@@ -1,0 +1,71 @@
+
+$(document).ready(function() {
+    //슬라이드 아이템 
+    $('.box_img1').eq(0).css({left: 0});  
+    // 배너 개수에 맞춰서 인디케이터 생성하기
+    let bn_count = $('.box_img1').length;
+    for(let i=0; i<bn_count; i++) { 
+        $('.indicator_box').append(`<div class="indi_box"></div>`)
+    }
+    $('.indi_box').eq(0).addClass('indi_active_box')
+
+    let curr_idx=0;
+    let timer = 500; // 모든 애니메이션에 적용될 시간
+    $('#btn_for_right').click(function(){ 
+        stop_box() 
+        if(curr_idx<6){
+        slide_box(curr_idx % bn_count, '-100%', (curr_idx+1) % bn_count, '100%',timer);
+        curr_idx += 1;
+        }
+    });
+
+    $('#btn_for_left').click(function(){ 
+        stop_box() 
+        if(curr_idx>0){
+        slide_box(curr_idx % bn_count, '100%', (curr_idx-1) % bn_count, '-100%',timer);
+        curr_idx -= 1;
+        }
+    })
+
+    function slide_box(o_idx, o_pos, c_idx, c_pos, t) {
+        // 나갈방
+        $('.box_img1').eq(o_idx).animate({
+            left: o_pos
+        }, t)
+
+        // 들어올방
+        $('.box_img1').eq((c_idx)).css({
+            left: c_pos
+        }).stop(true).animate({
+            left: 0
+        }, t)
+        $('.indicator_box').text(c_idx+1+"/"+bn_count);
+    }
+
+    function stop_box() {
+        // 버튼 막기
+        $('.btn_box_slide').css({
+            pointerEvents:'none'
+        })
+        setTimeout(function(){
+            $('.btn_box_slide').css({pointerEvents:'auto'})
+        }, timer)
+    }
+
+    $('.indi_box').click(function(){
+        let colored = $('.indi_active_box').index();
+        let clicked = $(this).index();
+
+        if(colored < clicked) {  
+            stop_box()
+            slide_box(colored, '-100%', clicked, '100%', timer); 
+            curr_idx = clicked ;
+        }
+        else if(colored > clicked) {
+            stop_box()
+            slide_box(colored, '100%', clicked, '-100%',timer);
+            curr_idx = clicked ;
+        }
+    })
+
+})

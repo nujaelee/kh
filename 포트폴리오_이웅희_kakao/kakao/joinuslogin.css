@@ -1,0 +1,102 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrap{
+    width: 95%;
+    margin: auto;
+}
+body{
+    margin: auto;
+}
+.header{
+    padding-top: 50px;
+    pointer-events: none;
+    text-align: center;
+    font-size: 32px;
+}
+.input_box{
+    padding-top: 50px;
+
+}
+.ipt{
+    width: 100%;
+    height: 50px;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+    outline: none;
+    font-weight: bold;
+}
+#user_pw1, #user_pw2, #us_name{
+    display: none;
+}
+
+
+
+
+.info_save{
+    padding: 25px 0;
+    font-size: 13px;
+
+}
+.chk{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+.login_box{
+    padding-top: 25px;
+}
+.login_box_yell{
+    padding: 12px 0;
+    text-align: center;
+    background-color: #fee500;;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+.login_box_gray{
+    padding: 12px 0;
+    text-align: center;
+    background-color: #fee500;;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+
+}
+.joinus_box{
+    padding: 15px 0 30px;
+    text-align: left;
+}
+.li_list{
+    list-style-type: circle;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 76px;
+    border-top: 1px solid rgba(100, 100, 100, 0.1);
+}

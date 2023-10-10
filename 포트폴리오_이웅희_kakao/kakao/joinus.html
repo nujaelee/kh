@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="joinuslogin.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">kakao</div>
+        <div class="txt_box"></div>
+        <div class="input_email">
+            <input required id="user_email" class="ipt"  type="text" placeholder="이메일 주소 입력">
+            <input required id="user_pw1" class="ipt"  type="password" placeholder="비밀번호 입력">
+            <input required id="user_pw2" class="ipt"  type="password" placeholder="비밀번호 확인">
+            <input required id="us_name" class="ipt"  type="text" placeholder="이름 입력">
+
+        </div>
+        <ul>
+            <li class="li_list">입력한 이메일 주소로 인증번호가 발송됩니다.</li>
+            <li class="li_list">인증메일을 받을 수 있도록 자주쓰는 이메일 주소를 입력해 주세요.</li>
+            <li class="li_list">사용 중인 Daum 이메일이 있다면, Daum 아이디로 가입해 주세요.</li>
+        </ul>
+
+        <div class="login_box">
+            <button class="login_box_gray" type="submit">다음</button>
+        </div>
+        <div class="joinus_box">
+            <a href="./login.html" target="_self">로그인</a>
+        </div>
+    </div>
+    <footer class="footer"></footer>
+    <script src="joinuslogin.js"></script>
+    <script src="user_data.js"></script>
+</body>
+</html>
